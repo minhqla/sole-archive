@@ -15,7 +15,7 @@
             <li>Price paid: £{{ item.price_paid }}</li>
         {% endif %}
         {% if item.purchase_date %}
-            <li>Purchase date: {{ item.purchase_date }}</li>
+            <li>Purchase date: {{ item.purchase_date|date:"d/m/Y" }}</li>
         {% endif %}
         <li>Favorite: {% if item.is_favorite %}Yes{% else %}No{% endif %}</li>
     </ul>

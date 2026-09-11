@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>My Collection</h1>
+
+    <a href="{% url 'collection_create' %}">+ Add sneaker</a>
+
+    {% if items %}
+        <ul>
+            {% for item in items %}
+                <li>
+                    <a href="{% url 'collection_detail' item.pk %}">
+                        {{ item.sneaker }} - UK{{ item.size }}
+                    </a>
+                    ({{ item.get_status_display }})
+                    {% if item.is_favorite %} - Favorite {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>You haven't added any sneakers yet.</p>
+    {% endif %}
+{% endblock %}

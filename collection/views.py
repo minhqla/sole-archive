@@ -44,3 +44,15 @@ def collection_create(request):
         form = CollectionItemForm()
 
     return render(request, 'collection/collection_form.html', {'form': form})
+
+
+# DELETE - remove an item from the collection
+@login_required
+def collection_delete(request, pk):
+    item = get_object_or_404(CollectionItem, pk=pk, user=request.user)
+
+    if request.method == 'POST':
+        item.delete()
+        return redirect('collection_list')
+
+    return render(request, 'collection/collection_confirm_delete.html', {'item': item})

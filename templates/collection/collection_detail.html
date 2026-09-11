@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ item.sneaker }}</h1>
+
+    {% if item.sneaker.image %}
+        <img src="{{ item.sneaker.image.url }}" width="200" alt="{{ item.sneaker }}">
+    {% endif %}
+
+    <ul>
+        <li>Size: UK{{ item.size }}</li>
+        <li>Condition: {{ item.get_condition_display }}</li>
+        <li>Status: {{ item.get_status_display }}</li>
+        {% if item.price_paid %}
+            <li>Price paid: £{{ item.price_paid }}</li>
+        {% endif %}
+        {% if item.purchase_date %}
+            <li>Purchase date: {{ item.purchase_date }}</li>
+        {% endif %}
+        <li>Favorite: {% if item.is_favorite %}Yes{% else %}No{% endif %}</li>
+    </ul>
+
+    {% if item.notes %}
+        <p>Notes: {{ item.notes }}</p>
+    {% endif %}
+
+    <a href="{% url 'collection_update' item.pk %}">Edit</a>
+    <a href="{% url 'collection_delete' item.pk %}">Delete</a>
+    <a href="{% url 'collection_list' %}">Back to collection</a>
+{% endblock %}

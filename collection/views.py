@@ -13,3 +13,16 @@ def signup(request):
         form = UserCreationForm()
 
     return render(request, 'registration/signup.html', {'form': form})
+
+# READ - show all items that belong to the logged in user
+@login_required
+def collection_list(request):
+    items = CollectionItem.objects.filter(user=request.user)
+    return render(request, 'collection/collection_list.html', {'items': items})
+
+
+# READ - show one item in detail
+@login_required
+def collection_detail(request, pk):
+    item = get_object_or_404(CollectionItem, pk=pk, user=request.user)
+    return render(request, 'collection/collection_detail.html', {'item': item})

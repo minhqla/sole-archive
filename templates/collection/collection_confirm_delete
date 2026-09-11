@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Delete sneaker?</h1>
+
+    <p>Are you sure you want to remove "{{ item.sneaker }}" from your collection?</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Yes, delete it</button>
+    </form>
+
+    <a href="{% url 'collection_detail' item.pk %}">Cancel</a>
+{% endblock %}

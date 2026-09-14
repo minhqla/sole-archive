@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,3 +28,9 @@ urlpatterns = [
     # Your collection app's urls (list, detail, add, edit, delete, signup)
     path('', include('collection.urls')),  # change 'collection' to your app's name
 ]
+
+# Serve uploaded images (media files) during development.
+# Without this, uploaded photos show as broken images even though they're
+# saved correctly - Django just isn't set up to send them to the browser.
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

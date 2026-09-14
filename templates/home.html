@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section class="hero">
+        <h1>Sole Archive</h1>
+        <p>Keep a personal record of every pair you own or want. Track size, condition, what you paid, and what's still on your wishlist - all in one place.</p>
+
+        {% if user.is_authenticated %}
+            <a href="{% url 'collection_list' %}" class="btn">View my collection</a>
+        {% else %}
+            <a href="{% url 'signup' %}" class="btn">Get started</a>
+            <a href="{% url 'login' %}" class="btn btn-secondary">Log in</a>
+        {% endif %}
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h2>Track everything</h2>
+            <p>Size, condition, purchase price, and notes for every sneaker you own.</p>
+        </div>
+        <div class="feature">
+            <h2>Build a wishlist</h2>
+            <p>Keep tabs on the pairs you want next, separate from what you already own.</p>
+        </div>
+        <div class="feature">
+            <h2>Mark favorites</h2>
+            <p>Flag your most valued pairs so they're always easy to find.</p>
+        </div>
+    </section>
+{% endblock %}

@@ -1,14 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Sole Archive</title>
+    <link rel="stylesheet" href="{% static 'collection/style.css' %}">
 </head>
 <body>
 
     <nav>
-        <a href="{% url 'collection_list' %}">Sole Archive</a>
+        <a href="{% url 'home' %}">Sole Archive</a>
 
         {% if user.is_authenticated %}
+            <a href="{% url 'collection_list' %}">My Collection</a>
             <span>Hi, {{ user.username }}</span>
             <form action="{% url 'logout' %}" method="post" style="display:inline;">
                 {% csrf_token %}
@@ -20,10 +23,8 @@
         {% endif %}
     </nav>
 
-    <hr>
-
     {% if messages %}
-        <ul>
+        <ul class="messages">
             {% for message in messages %}
                 <li>{{ message }}</li>
             {% endfor %}

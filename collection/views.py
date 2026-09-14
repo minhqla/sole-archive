@@ -42,6 +42,7 @@ def collection_create(request):
             new_item = form.save(commit=False)  # don't save to db yet
             new_item.user = request.user         # attach the logged in user
             new_item.save()
+            messages.success(request, f'"{new_item.sneaker}" was added to your collection.')
             return redirect('collection_list')
     else:
         form = CollectionItemForm()
@@ -51,27 +52,30 @@ def collection_create(request):
 
 # UPDATE - edit an existing item
 @login_required
-def collection_update(request, pk):
-    item = get_object_or_404(CollectionItem, pk=pk, user=request.user)
-
+def collection_create(request):
     if request.method == 'POST':
-        form = CollectionItemForm(request.POST, request.FILES, instance=item)
+        form = CollectionItemForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
-            return redirect('collection_detail', pk=item.pk)
+            new_item = form.save(commit=False)  # don't save to db yet
+            new_item.user = request.user         # attach the logged in user
+            new_item.save()
+            messages.success(request, f'"{new_item.sneaker}" was added to your collection.')
+            return redirect('collection_list')
     else:
-        form = CollectionItemForm(instance=item)
+        form = CollectionItemForm()
 
     return render(request, 'collection/collection_form.html', {'form': form})
 
 
 # DELETE - remove an item from the collection
 @login_required
-def collection_delete(request, pk):
+ef collection_delete(request, pk):
     item = get_object_or_404(CollectionItem, pk=pk, user=request.user)
 
     if request.method == 'POST':
+        sneaker_name = str(item.sneaker)  # grab the name before it's deleted
         item.delete()
+        messages.success(request, f'"{sneaker_name}" was removed from your collection.')
         return redirect('collection_list')
 
-    return render(request, 'collection/collection_confirm_delete.html', {'item': item})
+    return render(request, 'collection/collection_confirm_delete.html', {'item': item})  

@@ -13,6 +13,7 @@ def signup(request):
         if form.is_valid():
             new_user = form.save()
             login(request, new_user)
+            messages.success(request, f'Welcome, {new_user.username}! Your account has been created.')
             return redirect('collection_list')
     else:
         form = UserCreationForm()

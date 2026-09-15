@@ -4,9 +4,14 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib import messages
 from .models import CollectionItem
-from .forms import CollectionItemForm
+from .forms import CollectionItemForm, SneakerForm
 
-# Create your views here.
+
+# PUBLIC - the homepage, visible to everyone whether logged in or not
+def home(request):
+    return render(request, 'home.html')
+
+
 # SIGNUP - create a new user account, then log them straight in
 def signup(request):
     if request.method == 'POST':

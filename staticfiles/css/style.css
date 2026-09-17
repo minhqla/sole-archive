@@ -14,6 +14,23 @@
     --color-success-bg: #E9F5EA;
 }
 
+* {
+    box-sizing: border-box;/* ============================================
+   COLOR SCHEME - change these values to swap
+   the whole site's look in one place
+   ============================================ */
+:root {
+    --color-background: #F5F2EC;   /* page background - warm off-white */
+    --color-surface: #FFFFFF;      /* cards, nav, forms */
+    --color-text: #2B2B28;         /* main text - charcoal */
+    --color-text-muted: #6B6862;   /* secondary text */
+    --color-border: #E2DDD2;       /* borders/dividers */
+    --color-accent: #C08A2E;       /* buttons, links, highlights - amber */
+    --color-accent-hover: #9C6E22; /* darker amber on hover */
+    --color-success: #2E7D32;      /* success message banner */
+    --color-success-bg: #E9F5EA;
+}
+
 /* --- Alternative palettes: uncomment ONE block below instead of the one above ---
 
    Bold/streetwear (black, white, red):
@@ -68,6 +85,193 @@ nav a {
 
 .nav-right a {
     margin-right: 0;
+}
+
+nav a:hover {
+    color: var(--color-accent);
+}
+
+nav button {
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+nav button:hover {
+    color: var(--color-accent);
+}
+
+/* --- Page layout --- */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+/* --- Notification banners (django messages) --- */
+.messages {
+    list-style: none;
+    margin: 0;
+    padding: 1rem 2rem;
+}
+
+.messages li {
+    background-color: var(--color-success-bg);
+    color: var(--color-success);
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Collection list --- */
+main ul {
+    list-style: none;
+    padding: 0;
+}
+
+main ul li {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+main ul li a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+main ul li a:hover {
+    color: var(--color-accent);
+}
+
+/* --- Forms --- */
+form p {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    font-size: 1rem;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+/* --- Buttons --- */
+button, input[type="submit"], .btn {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: #FFFFFF;
+    border: none;
+    padding: 0.7rem 1.4rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+button:hover, input[type="submit"]:hover, .btn:hover {
+    background-color: var(--color-accent-hover);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-accent);
+    color: #FFFFFF;
+}
+
+/* --- Homepage --- */
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.hero p {
+    max-width: 500px;
+    margin: 0 auto 1.5rem;
+    color: var(--color-text-muted);
+}
+
+.features {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.feature {
+    flex: 1;
+    min-width: 200px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.feature h2 {
+    margin-top: 0;
+    color: var(--color-accent);
+}
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", Arial, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.5;
+}
+
+/* --- Navigation --- */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+}
+
+nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 1rem;
 }
 
 nav a:hover {

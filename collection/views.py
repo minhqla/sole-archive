@@ -31,8 +31,17 @@ def signup(request):
 @login_required
 def collection_list(request):
     items = CollectionItem.objects.filter(user=request.user)
-    return render(request, 'collection/collection_list.html', {'items': items})
 
+    selected_status = request.GET.get('status')
+    if selected_status == 'owned':
+        items = items.filter(status='owned')
+    elif selected_status == 'wishlist':
+        items = items.filter(status='wishlist')
+
+    return render(request, 'collection/collection_list.html', {
+        'items': items,
+        'selected_status': selected_status,
+    })
 
 # READ - show one item in detail
 @login_required

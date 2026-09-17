@@ -5,6 +5,12 @@
 
     <a href="{% url 'collection_create' %}">+ Add sneaker</a>
 
+    <div class="filters">
+        <a href="{% url 'collection_list' %}" class="{% if not selected_status %}active{% endif %}">All</a>
+        <a href="{% url 'collection_list' %}?status=owned" class="{% if selected_status == 'owned' %}active{% endif %}">Owned</a>
+        <a href="{% url 'collection_list' %}?status=wishlist" class="{% if selected_status == 'wishlist' %}active{% endif %}">Wishlist</a>
+    </div>
+
     {% if items %}
         <ul>
             {% for item in items %}

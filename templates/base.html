@@ -3,25 +3,27 @@
 <html>
 <head>
     <title>Sole Archive</title>
-    <style> @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');</style>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');</style>
+    <link rel="stylesheet" href="{% static 'collection/style.css' %}">
 </head>
 <body>
 
     <nav>
         <a href="{% url 'home' %}">Sole Archive</a>
 
-        {% if user.is_authenticated %}
-            <a href="{% url 'collection_list' %}">My Collection</a>
-            <span>Hi, {{ user.username }}</span>
-            <form action="{% url 'logout' %}" method="post" style="display:inline;">
-                {% csrf_token %}
-                <button type="submit">Log out</button>
-            </form>
-        {% else %}
-            <a href="{% url 'login' %}">Log in</a>
-            <a href="{% url 'signup' %}">Sign up</a>
-        {% endif %}
+        <div class="nav-right">
+            {% if user.is_authenticated %}
+                <a href="{% url 'collection_list' %}">My Collection</a>
+                <span>Hi, {{ user.username }}</span>
+                <form action="{% url 'logout' %}" method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit">Log out</button>
+                </form>
+            {% else %}
+                <a href="{% url 'login' %}">Log in</a>
+                <a href="{% url 'signup' %}">Sign up</a>
+            {% endif %}
+        </div>
     </nav>
 
     {% if messages %}

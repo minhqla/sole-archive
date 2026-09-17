@@ -14,13 +14,30 @@
     --color-success-bg: #E9F5EA;
 }
 
+/* --- Alternative palettes: uncomment ONE block below instead of the one above ---
+
+   Bold/streetwear (black, white, red):
+   --color-background: #FFFFFF;
+   --color-surface: #F5F5F5;
+   --color-text: #111111;
+   --color-accent: #E4002B;
+   --color-accent-hover: #B4001F;
+
+   Cool/minimal (navy, teal):
+   --color-background: #F4F5F7;
+   --color-surface: #FFFFFF;
+   --color-text: #1C1F26;
+   --color-accent: #2952A3;
+   --color-accent-hover: #1F3F80;
+*/
+
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     background-color: var(--color-background);
     color: var(--color-text);
     line-height: 1.5;
@@ -41,6 +58,16 @@ nav a {
     text-decoration: none;
     font-weight: 600;
     margin-right: 1rem;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-right a {
+    margin-right: 0;
 }
 
 nav a:hover {

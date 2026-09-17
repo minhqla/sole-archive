@@ -230,3 +230,13 @@ button:hover, input[type="submit"]:hover, .btn:hover {
     margin-top: 0;
     color: var(--color-accent);
 }
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+}

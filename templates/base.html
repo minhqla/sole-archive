@@ -3,13 +3,19 @@
 <html>
 <head>
     <title>Sole Archive</title>
-    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');</style>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 
     <nav>
-        <a href="{% url 'home' %}">Sole Archive</a>
+        <a href="{% url 'home' %}"><img src="{% static 'logo.png' %}" alt="Sole Archive" class="logo"></a>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+        <label for="nav-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
 
         <div class="nav-right">
             {% if user.is_authenticated %}
@@ -39,9 +45,9 @@
         {% endblock %}
     </main>
 
-<footer>
-    <p>&copy; {% now "Y" %} Sole Archive. All rights reserved.</p>
-</footer>
+    <footer>
+        <p>&copy; {% now "Y" %} Sole Archive. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>

@@ -14,23 +14,6 @@
     --color-success-bg: #E9F5EA;
 }
 
-/* --- Alternative palettes: uncomment ONE block below instead of the one above ---
-
-   Bold/streetwear (black, white, red):
-   --color-background: #FFFFFF;
-   --color-surface: #F5F5F5;
-   --color-text: #111111;
-   --color-accent: #E4002B;
-   --color-accent-hover: #B4001F;
-
-   Cool/minimal (navy, teal):
-   --color-background: #F4F5F7;
-   --color-surface: #FFFFFF;
-   --color-text: #1C1F26;
-   --color-accent: #2952A3;
-   --color-accent-hover: #1F3F80;
-*/
-
 * {
     box-sizing: border-box;
 }
@@ -54,6 +37,8 @@ nav {
     padding: 1rem 2rem;
     background-color: var(--color-surface);
     border-bottom: 1px solid var(--color-border);
+    position: relative;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -67,6 +52,32 @@ nav a {
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+/* The checkbox itself is invisible - only its checked state matters */
+.nav-toggle-checkbox {
+    display: none;
+}
+
+/* Hidden on desktop; the media query below reveals it on small screens */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 26px;
+    height: 2px;
+    background-color: var(--color-text);
+    border-radius: 2px;
+}
+
+.logo {
+    height: 28px;
+    width: auto;
+    display: block;
 }
 
 .nav-right a {
@@ -88,6 +99,21 @@ nav button {
 nav button:hover {
     color: var(--color-accent);
 }
+
+.nav-right {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+/* When the hidden checkbox is checked, show the menu */
+.nav-toggle-checkbox:checked ~ .nav-right {
+    display: flex;
+}
+
 
 /* --- Page layout --- */
 main {
@@ -263,3 +289,9 @@ footer {
     color: var(--color-text-muted);
     font-size: 0.75rem;
 }
+
+/* --- Mobile nav: below 600px wide, swap the inline links for a burger menu --- */
+@media (max-width: 600px) {
+    .hamburger {
+        display: flex;
+    }

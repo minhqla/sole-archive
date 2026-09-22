@@ -37,8 +37,8 @@ def collection_list(request):
         items = items.filter(status='owned')
     elif selected_status == 'wishlist':
         items = items.filter(status='wishlist')
-    elif selected_status == 'favorites':
-        items = items.filter(is_favorite=True)
+    elif selected_status == 'favourites':
+        items = items.filter(is_favourite=True)
     # if selected_status is anything else (or missing), show everything
 
     return render(request, 'collection/collection_list.html', {

@@ -8,29 +8,29 @@
 <body>
 
     <nav>
-        <a href="{% url 'home' %}"><img src="{% static 'logo.png' %}" alt="Sole Archive" class="logo"></a>
+    <a href="{% url 'home' %}"><img src="{% static 'logo.png' %}" alt="Sole Archive" class="logo"></a>
 
-        <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
-        <label for="nav-toggle" class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+    <label for="nav-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
 
-        <div class="nav-right">
-            {% if user.is_authenticated %}
-                <a href="{% url 'collection_list' %}">My Collection</a>
-                <span>Hi, {{ user.username }}</span>
-                <form action="{% url 'logout' %}" method="post" style="display:inline;">
-                    {% csrf_token %}
-                    <button type="submit">Log out</button>
-                </form>
-            {% else %}
-                <a href="{% url 'login' %}">Log in</a>
-                <a href="{% url 'signup' %}">Sign up</a>
-            {% endif %}
-        </div>
-    </nav>
+    <div class="nav-right">
+        {% if user.is_authenticated %}
+            <a href="{% url 'collection_list' %}">My Collection</a>
+            <span>Hi, {{ user.username }}</span>
+            <form action="{% url 'logout' %}" method="post" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit">Log out</button>
+            </form>
+        {% else %}
+            <a href="{% url 'login' %}">Log in</a>
+            <a href="{% url 'signup' %}">Sign up</a>
+        {% endif %}
+    </div>
+</nav>
 
     {% if messages %}
         <ul class="messages">

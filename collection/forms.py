@@ -7,7 +7,7 @@ class CollectionItemForm(forms.ModelForm):
         model = CollectionItem
         # We leave out 'user' because we will set that automatically
         # in the view based on who is logged in
-        fields = ['sneaker', 'size', 'condition', 'status', 'price_paid', 'purchase_date', 'is_favorite', 'notes']
+        fields = ['sneaker', 'size', 'condition', 'status', 'price_paid', 'purchase_date', 'is_favourite', 'notes']
         widgets = {
             'purchase_date': forms.DateInput(attrs={'type': 'date'}),
         }

@@ -58,7 +58,7 @@ class CollectionItem(models.Model):
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='owned')
     price_paid = models.PositiveIntegerField(blank=True, null=True)  # whole pounds (£), no pence
     purchase_date = models.DateField(blank=True, null=True)
-    is_favorite = models.BooleanField(default=False)
+    is_favourite = models.BooleanField(default=False)
     notes = models.TextField(blank=True)
 
     date_added = models.DateTimeField(auto_now_add=True)

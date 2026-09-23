@@ -24,7 +24,7 @@
         <p>Notes: {{ item.notes }}</p>
     {% endif %}
 
-    <a href="{% url 'collection_update' item.pk %}">Edit</a>
-    <a href="{% url 'collection_delete' item.pk %}">Delete</a>
-    <a href="{% url 'collection_list' %}">Back to collection</a>
+    <a href="{% url 'collection_update' item.pk %}" class="btn btn-secondary">Edit</a>
+    <a href="{% url 'collection_delete' item.pk %}" class="btn btn-danger">Delete</a>
+    <a href="{% url 'collection_list' %}" class="btn btn-cancel">Back to collection</a>
 {% endblock %}

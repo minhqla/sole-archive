@@ -8,6 +8,7 @@
     --color-accent-hover: #9C6E22; /* darker amber on hover */
     --color-success: #2E7D32;      /* success message banner */
     --color-success-bg: #E9F5EA;
+    --color-danger: #A6432F;       /* delete/destructive actions - warm brick red */
 }
 
 * {
@@ -275,6 +276,17 @@ button:hover, input[type="submit"]:hover, .btn:hover {
 .btn-cancel:hover {
     background-color: var(--color-border);
     color: var(--color-text);
+}
+
+.btn-danger {
+    background-color: transparent;
+    color: var(--color-danger);
+    border: 1px solid var(--color-danger);
+}
+
+.btn-danger:hover {
+    background-color: var(--color-danger);
+    color: #FFFFFF;
 }
 
 /* --- Homepage --- */

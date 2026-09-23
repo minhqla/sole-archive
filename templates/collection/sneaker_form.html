@@ -1,21 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>
-        {% if form.instance.pk %}
-            Edit sneaker
-        {% else %}
-            Add sneaker
-        {% endif %}
-    </h1>
+    <h1>Add a new sneaker to the catalog</h1>
 
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Save</button>
+        <button type="submit">Save sneaker</button>
     </form>
 
-    <p>Can't find your sneaker in the list? <a href="{% url 'sneaker_create' %}">Add a new one to the catalog</a></p>
-
-    <a href="{% url 'collection_list' %}">Cancel</a>
+    <a href="{% url 'collection_create' %}" class="btn btn-cancel">Cancel</a>
 {% endblock %}

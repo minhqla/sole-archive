@@ -266,6 +266,17 @@ button:hover, input[type="submit"]:hover, .btn:hover {
     color: #FFFFFF;
 }
 
+.btn-cancel {
+    background-color: transparent;
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
+}
+
+.btn-cancel:hover {
+    background-color: var(--color-border);
+    color: var(--color-text);
+}
+
 /* --- Homepage --- */
 .hero {
     text-align: center;

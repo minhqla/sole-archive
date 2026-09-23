@@ -3,7 +3,7 @@
 {% block content %}
     <h1>My Collection</h1>
 
-    <a href="{% url 'collection_create' %}">+ Add sneaker</a>
+    <a href="{% url 'collection_create' %}" class="btn">+ Add sneaker</a>
 
     <div class="filters">
         <a href="{% url 'collection_list' %}" class="{% if not selected_status %}active{% endif %}">All</a>
@@ -20,7 +20,7 @@
                         {{ item.sneaker }} - UK{{ item.size }}
                     </a>
                     ({{ item.get_status_display }})
-                    {% if item.is_favorite %} - Favorite {% endif %}
+                    {% if item.is_favourite %} - Favourite {% endif %}
                 </li>
             {% endfor %}
         </ul>

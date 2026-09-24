@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth import login
 from django.contrib import messages
 from .models import CollectionItem
 from .forms import CollectionItemForm, SneakerForm
@@ -10,6 +9,7 @@ from .forms import CollectionItemForm, SneakerForm
 # PUBLIC - the homepage, visible to everyone whether logged in or not
 def home(request):
     return render(request, 'home.html')
+
 
 # READ - show all items that belong to the logged in user
 @login_required
@@ -29,6 +29,7 @@ def collection_list(request):
         'items': items,
         'selected_status': selected_status,
     })
+
 
 # READ - show one item in detail
 @login_required

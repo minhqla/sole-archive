@@ -1,21 +1,23 @@
 from django import forms
+from allauth.account.forms import SignupForm as AllauthSignupForm
 from .models import CollectionItem, Sneaker
 
 
-class SignUpForm(UserCreationForm):
-    class Meta:
-        model = User
-        fields = ['username', 'password1', 'password2']
-        widgets = {
-            'username': forms.TextInput(attrs={'maxlength': 20}),
-        }
+class CustomSignupForm(AllauthSignupForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['username'].widget.attrs['maxlength'] = 20
+        self.fields['username'].help_text = (
+            'Required. 20 characters or fewer. '
+            'Letters, digits and @/./+/-/_ only.'
+        )
 
     def clean_username(self):
-        username = self.cleaned_data.get('username')
+        username = super().clean_username()
         if len(username) > 20:
             raise forms.ValidationError('Username must be 20 characters or fewer.')
         return username
-
+    
 class CollectionItemForm(forms.ModelForm):
     class Meta:
         model = CollectionItem

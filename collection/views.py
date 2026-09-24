@@ -11,22 +11,6 @@ from .forms import CollectionItemForm, SneakerForm
 def home(request):
     return render(request, 'home.html')
 
-
-# SIGNUP - create a new user account, then log them straight in
-def signup(request):
-    if request.method == 'POST':
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            new_user = form.save()
-            login(request, new_user)
-            messages.success(request, f'Welcome, {new_user.username}! Your account has been created.')
-            return redirect('collection_list')
-    else:
-        form = UserCreationForm()
-
-    return render(request, 'registration/signup.html', {'form': form})
-
-
 # READ - show all items that belong to the logged in user
 @login_required
 def collection_list(request):

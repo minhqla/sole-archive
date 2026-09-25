@@ -65,21 +65,6 @@ def sneaker_create(request):
     })
 
 
-# CREATE - add a brand new sneaker to the shared catalog
-@login_required
-def sneaker_create(request):
-    if request.method == 'POST':
-        form = SneakerForm(request.POST, request.FILES)
-        if form.is_valid():
-            new_sneaker = form.save()
-            messages.success(request, f'"{new_sneaker}" was added to the sneaker catalog.')
-            return redirect('collection_create')
-    else:
-        form = SneakerForm()
-
-    return render(request, 'collection/sneaker_form.html', {'form': form})
-
-
 # CREATE - add a new item to the collection
 @login_required
 def collection_create(request):

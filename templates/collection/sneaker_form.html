@@ -1,13 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Add a new sneaker to the catalog</h1>
+    <h1>Add a new sneaker</h1>
+    <p>Fill in the sneaker's details and your own collection details below - both are saved together.</p>
 
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Save sneaker</button>
+
+        <h2>Sneaker details</h2>
+        {{ sneaker_form.as_p }}
+
+        <h2>Your details</h2>
+        {{ details_form.as_p }}
+
+        <button type="submit" class="btn">Save to my collection</button>
     </form>
 
-    <a href="{% url 'collection_create' %}" class="btn btn-cancel">Cancel</a>
+    <a href="{% url 'collection_list' %}" class="btn btn-cancel">Cancel</a>
 {% endblock %}

@@ -1,9 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from .models import CollectionItem
-from .forms import CollectionItemForm, SneakerForm
+from .forms import CollectionItemForm, SneakerForm, CollectionItemDetailsForm
 
 
 # PUBLIC - the homepage, visible to everyone whether logged in or not
@@ -36,6 +35,34 @@ def collection_list(request):
 def collection_detail(request, pk):
     item = get_object_or_404(CollectionItem, pk=pk, user=request.user)
     return render(request, 'collection/collection_detail.html', {'item': item})
+
+
+# CREATE - add a brand new sneaker to the catalog AND to the user's
+# collection in one go, so they don't have to fill in two separate forms
+@login_required
+def sneaker_create(request):
+    if request.method == 'POST':
+        sneaker_form = SneakerForm(request.POST, request.FILES)
+        details_form = CollectionItemDetailsForm(request.POST)
+
+        if sneaker_form.is_valid() and details_form.is_valid():
+            new_sneaker = sneaker_form.save()
+
+            new_item = details_form.save(commit=False)
+            new_item.sneaker = new_sneaker
+            new_item.user = request.user
+            new_item.save()
+
+            messages.success(request, f'"{new_sneaker}" was added to your collection.')
+            return redirect('collection_detail', pk=new_item.pk)
+    else:
+        sneaker_form = SneakerForm()
+        details_form = CollectionItemDetailsForm()
+
+    return render(request, 'collection/sneaker_form.html', {
+        'sneaker_form': sneaker_form,
+        'details_form': details_form,
+    })
 
 
 # CREATE - add a brand new sneaker to the shared catalog

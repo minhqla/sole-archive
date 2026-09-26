@@ -17,7 +17,7 @@
 
 body {
     margin: 0;
-    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-family: Montserra, Arial, sans-serif;
     background-color: var(--color-background);
     color: var(--color-text);
     line-height: 1.5;
@@ -122,7 +122,7 @@ nav button:hover {
 main {
     max-width: 900px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0rem 2rem 2rem;
     flex: 1;
 }
 

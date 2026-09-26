@@ -3,12 +3,17 @@
 <html>
 <head>
     <title>Sole Archive</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'images/favicon-sa-30x30.png' %}">
+    <link rel="icon" type="image/png" href="{% static 'images/favicon-sa-40x40.png' %}">
+
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 
     <nav>
-    <a href="{% url 'home' %}"><img src="{% static 'logo.png' %}" alt="Sole Archive Logo" class="logo"></a>
+    <a href="{% url 'home' %}"><img src="{% static 'images\logo.png' %}" alt="Sole Archive Logo" class="logo"></a>
 
     <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
     <label for="nav-toggle" class="hamburger">

@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
     <h1>{{ item.sneaker }}</h1>
 
     {% if item.sneaker.image %}
-        <img src="{{ item.sneaker.image.url }}" width="200" alt="{{ item.sneaker }}">
+    <img src="{{ item.sneaker.image.url }}" width="200" alt="{{ item.sneaker }}">
+    {% else %}
+    <img src="{% static 'images/placeholder.png' %}" width="200" alt="No image available">
     {% endif %}
 
     <ul>

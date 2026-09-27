@@ -9,16 +9,14 @@ class CustomSignupForm(AllauthSignupForm):
         super().__init__(*args, **kwargs)
         self.fields['username'].widget.attrs['maxlength'] = 20
         self.fields['username'].widget.attrs['autocomplete'] = 'username'
-        self.fields['username'].help_text = 'Required. 20 characters or fewer.
-        Letters, digits and @/./+/-/_ only.'
+        self.fields['username'].help_text = 'Required. 20 characters or fewer. Letters, digits and @/./+/-/_ only.'
         self.fields['password1'].widget.attrs['autocomplete'] = 'new-password'
         self.fields['password2'].widget.attrs['autocomplete'] = 'new-password'
 
     def clean_username(self):
         username = super().clean_username()
         if len(username) > 20:
-            raise forms.ValidationError('Username must be 20 characters
-                                        or fewer.')
+            raise forms.ValidationError('Username must be 20 characters or fewer.')
         return username
 
 
@@ -26,8 +24,7 @@ class CustomLoginForm(AllauthLoginForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['login'].widget.attrs['autocomplete'] = 'username'
-        self.fields['password'].widget.attrs['autocomplete'] =
-        'current-password'
+        self.fields['password'].widget.attrs['autocomplete'] = 'current-password'
 
 
 class CollectionItemForm(forms.ModelForm):

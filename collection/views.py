@@ -53,8 +53,7 @@ def sneaker_create(request):
             new_item.user = request.user
             new_item.save()
 
-            messages.success(request, f'"{new_sneaker}" was added
-                             to your collection.')
+            messages.success(request, f'"{new_sneaker}" was added to your collection.')
             return redirect('collection_detail', pk=new_item.pk)
     else:
         sneaker_form = SneakerForm()
@@ -75,8 +74,7 @@ def collection_create(request):
             new_item = form.save(commit=False)  # don't save to db yet
             new_item.user = request.user         # attach the logged in user
             new_item.save()
-            messages.success(request, f'"{new_item.sneaker}" was added
-                                        to your collection.')
+            messages.success(request, f'"{new_item.sneaker}" was added to your collection.')
             return redirect('collection_list')
     else:
         form = CollectionItemForm()
@@ -109,9 +107,7 @@ def collection_delete(request, pk):
     if request.method == 'POST':
         sneaker_name = str(item.sneaker)  # grab the name before it's deleted
         item.delete()
-        messages.success(request, f'"{sneaker_name}" was removed
-                                    from your collection.')
+        messages.success(request, f'"{sneaker_name}" was removed from your collection.')
         return redirect('collection_list')
 
-    return render(request, 'collection/collection_confirm_delete.html',
-                  {'item': item})
+    return render(request, 'collection/collection_confirm_delete.html', {'item': item})

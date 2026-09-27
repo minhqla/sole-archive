@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-mbp7rb&4tec___#dmq3cntwj_5bd%5a$by7e97)et4)i6s4s!d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.herokuapp.com','localhost', '127.0.0.1',]
 
@@ -172,3 +172,7 @@ ACCOUNT_SIGNUP_FIELDS = ['username*', 'password1*', 'password2*']
 ACCOUNT_FORMS = {
     'signup': 'collection.forms.CustomSignupForm'
 }
+
+ACCOUNT_SESSION_REMEMBER = None   # None = show the checkbox and respect it; True/False would force one behaviour always
+
+SESSION_COOKIE_AGE = 1209600   # 2 weeks, in seconds - how long a "remembered" session lasts

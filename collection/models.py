@@ -15,7 +15,8 @@ class Sneaker(models.Model):
     silhouette = models.CharField(max_length=150)  # e.g. "Air Max 90"
     colorway = models.CharField(max_length=150)    # e.g. "Triple Black"
     release_date = models.DateField(blank=True, null=True)
-    retail_price = models.DecimalField(max_digits=8, decimal_places=2, blank=True, null=True)
+    retail_price = models.DecimalField(max_digits=8, decimal_places=2,
+                                       blank=True, null=True)
     image = models.ImageField(upload_to='sneakers/', blank=True, null=True)
 
     def __str__(self):
@@ -53,10 +54,12 @@ class CollectionItem(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     sneaker = models.ForeignKey(Sneaker, on_delete=models.CASCADE)
 
-    size = models.CharField(max_length=4, choices=UK_SIZE_CHOICES)  # UK size
-    condition = models.CharField(max_length=10, choices=CONDITION_CHOICES, default='new')
-    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='owned')
-    price_paid = models.PositiveIntegerField(blank=True, null=True)  # whole pounds (£), no pence
+    size = models.CharField(max_length=4, choices=UK_SIZE_CHOICES)
+    condition = models.CharField(max_length=10, choices=CONDITION_CHOICES,
+                                 default='new')
+    status = models.CharField(max_length=10, choices=STATUS_CHOICES,
+                              default='owned')
+    price_paid = models.PositiveIntegerField(blank=True, null=True)
     purchase_date = models.DateField(blank=True, null=True)
     is_favourite = models.BooleanField(default=False)
     notes = models.TextField(blank=True)

@@ -21,12 +21,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-mbp7rb&4tec___#dmq3cntwj_5bd%5a$by7e97)et4)i6s4s!d'
+SECRET_KEY =
+'django-insecure-mbp7rb&4tec___#dmq3cntwj_5bd%5a$by7e97)et4)i6s4s!d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.herokuapp.com','localhost', '127.0.0.1',]
+ALLOWED_HOSTS = ['.herokuapp.com', 'localhost',
+                 '127.0.0.1', ]
 
 
 # Application definition
@@ -173,6 +175,6 @@ ACCOUNT_FORMS = {
     'signup': 'collection.forms.CustomSignupForm'
 }
 
-ACCOUNT_SESSION_REMEMBER = None   # None = show the checkbox and respect it; True/False would force one behaviour always
+ACCOUNT_SESSION_REMEMBER = None
 
-SESSION_COOKIE_AGE = 1209600   # 2 weeks, in seconds - how long a "remembered" session lasts
+SESSION_COOKIE_AGE = 1209600

@@ -9,14 +9,16 @@ class CustomSignupForm(AllauthSignupForm):
         super().__init__(*args, **kwargs)
         self.fields['username'].widget.attrs['maxlength'] = 20
         self.fields['username'].widget.attrs['autocomplete'] = 'username'
-        self.fields['username'].help_text = 'Required. 20 characters or fewer. Letters, digits and @/./+/-/_ only.'
+        self.fields['username'].help_text = 'Required. 20 characters or fewer.
+        Letters, digits and @/./+/-/_ only.'
         self.fields['password1'].widget.attrs['autocomplete'] = 'new-password'
         self.fields['password2'].widget.attrs['autocomplete'] = 'new-password'
 
     def clean_username(self):
         username = super().clean_username()
         if len(username) > 20:
-            raise forms.ValidationError('Username must be 20 characters or fewer.')
+            raise forms.ValidationError('Username must be 20 characters
+                                        or fewer.')
         return username
 
 
@@ -24,13 +26,15 @@ class CustomLoginForm(AllauthLoginForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['login'].widget.attrs['autocomplete'] = 'username'
-        self.fields['password'].widget.attrs['autocomplete'] = 'current-password'
+        self.fields['password'].widget.attrs['autocomplete'] =
+        'current-password'
 
 
 class CollectionItemForm(forms.ModelForm):
     class Meta:
         model = CollectionItem
-        fields = ['sneaker', 'size', 'condition', 'status', 'price_paid', 'purchase_date', 'is_favourite', 'notes']
+        fields = ['sneaker', 'size', 'condition', 'status', 'price_paid',
+                  'purchase_date', 'is_favourite', 'notes']
         widgets = {
             'purchase_date': forms.DateInput(attrs={'type': 'date'}),
         }
@@ -39,7 +43,8 @@ class CollectionItemForm(forms.ModelForm):
 class SneakerForm(forms.ModelForm):
     class Meta:
         model = Sneaker
-        fields = ['brand', 'silhouette', 'colorway', 'release_date', 'retail_price', 'image']
+        fields = ['brand', 'silhouette', 'colorway', 'release_date',
+                  'retail_price', 'image']
         widgets = {
             'release_date': forms.DateInput(attrs={'type': 'date'}),
         }
@@ -48,11 +53,13 @@ class SneakerForm(forms.ModelForm):
 class CollectionItemDetailsForm(forms.ModelForm):
     """
     Same as CollectionItemForm but without the 'sneaker' field - used when
-    creating a brand new sneaker and adding it to the collection at the same time.
+    creating a brand new sneaker and adding it to the
+    collection at the same time.
     """
     class Meta:
         model = CollectionItem
-        fields = ['size', 'condition', 'status', 'price_paid', 'purchase_date', 'is_favourite', 'notes']
+        fields = ['size', 'condition', 'status', 'price_paid', 'purchase_date',
+                  'is_favourite', 'notes']
         widgets = {
             'purchase_date': forms.DateInput(attrs={'type': 'date'}),
         }

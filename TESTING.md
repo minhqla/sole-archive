@@ -71,12 +71,12 @@ I've tested my deployed project to check for responsiveness issues.
 
 | Page | Mobile | Tablet | Desktop | Notes |
 | --- | --- | --- | --- | --- |
-| Register | ![screenshot](documentation/test/mobile-signup-test.png) | ![screenshot](documentation/responsiveness/tablet-register.png) | ![screenshot](documentation/test/chrome-signup-test.png) | Works as expected |
-| Login | ![screenshot](documentation/test/mobile-login-test.png) | ![screenshot](documentation/responsiveness/tablet-login.png) | ![screenshot](documentation/test/chrome-login-test.png) | Works as expected |
-| Home | ![screenshot](documentation/test/mobile-homepage-test.png) | ![screenshot](documentation/responsiveness/tablet-home.png) | ![screenshot](documentation/test/chrome-homepage-test.png) | Works as expected |
-| Add Sneaker | ![screenshot](documentation/test/mobile-add-sneaker-test.png) | ![screenshot](documentation/responsiveness/tablet-add-blog.png) | ![screenshot](documentation/test/chrome-add-sneaker-test.png) | Works as expected |
-| Edit Sneaker | ![screenshot](documentation/test/mobile-edit-sneaker-test.png) | ![screenshot](documentation/responsiveness/tablet-edit-blog.png) | ![screenshot](documentation/test/chrome-edit-sneaker-test.png) | Works as expected |
-| Sneaker Post | ![screenshot](documentation\test\mobile-sneaker-post-test.png) | ![screenshot](documentation/responsiveness/tablet-blog-post.png) | ![screenshot](documentation/test/chrome-sneaker-post-test.png) | Works as expected |
+| Register | ![screenshot](documentation/test/mobile-signup-test.png) | ![screenshot](documentation/test/tablet-signup-test.png) | ![screenshot](documentation/test/chrome-signup-test.png) | Works as expected |
+| Login | ![screenshot](documentation/test/mobile-login-test.png) | ![screenshot](documentation/test/tablet-login-test.png) | ![screenshot](documentation/test/chrome-login-test.png) | Works as expected |
+| Home | ![screenshot](documentation/test/mobile-homepage-test.png) | ![screenshot](documentation/test/tablet-homepage-test.png) | ![screenshot](documentation/test/chrome-homepage-test.png) | Works as expected |
+| Add Sneaker | ![screenshot](documentation/test/mobile-add-sneaker-test.png) | ![screenshot](documentation/test/tablet-add-sneaker-test.png) | ![screenshot](documentation/test/chrome-add-sneaker-test.png) | Works as expected |
+| Edit Sneaker | ![screenshot](documentation/test/mobile-edit-sneaker-test.png) | ![screenshot](documentation/test/tablet-edit-sneaker-test.png) | ![screenshot](documentation/test/chrome-edit-sneaker-test.png) | Works as expected |
+| Sneaker Post | ![screenshot](documentation\test\mobile-sneaker-post-test.png) | ![screenshot](documentation/test/tablet-sneaker-post-test.png) | ![screenshot](documentation/test/chrome-sneaker-post-test.png) | Works as expected |
 
 ## Browser Compatibility
 
@@ -216,79 +216,7 @@ I have conducted a series of automated tests on my application.
 
 ### JavaScript (Jest Testing)
 
-⚠️ INSTRUCTIONS ⚠️
-
-Adjust the code below (file names, function names, etc.) to match your own project files/folders. Use these notes loosely when documenting your own Jest procedures, and remove/adjust where applicable.
-
-- Installing Node.js (**Windows**)
-  - https://codeinstitute.s3.eu-west-1.amazonaws.com/nodejs-installation-guides/Installing+and+maintaining+NodeJS+(Windows).pdf
-- Installing Node.js (**MacOS**)
-  - https://codeinstitute.s3.eu-west-1.amazonaws.com/nodejs-installation-guides/Installing+and+maintaining+NodeJS+(MacOS).pdf
-
-⚠️ SAMPLE ⚠️
-
-I have used the [Jest](https://jestjs.io) JavaScript testing framework to test the application functionality. In order to work with Jest, I first had to initialize NPM.
-
-- `npm init`
-- Hit `<enter>` for all options, except for **test command:**, just type `jest`.
-
-Add Jest to a list called **Dev Dependencies** in a dev environment:
-
-- `npm install --save-dev jest`
-
-**IMPORTANT**: Initial configurations
-
-When creating test files, the name of the file needs to be `file-name.test.js` in order for Jest to properly work. Without the following, Jest won't properly run the tests:
-
-- `npm install -D jest-environment-jsdom`
-
-Due to a change in Jest's default configuration, you'll need to add the following code to the top of the `.test.js` file:
-
-```js
-/**
- * @jest-environment jsdom
- */
-
-/* jshint esversion: 11, jquery: true */
-/* global jest, require, describe, beforeEach, afterEach, test, expect, global */
-
-const { test, expect } = require("@jest/globals");
-const { function1, function2, function3, etc. } = require("../script-name");
-
-beforeAll(() => {
-    let fs = require("fs");
-    let fileContents = fs.readFileSync("index.html", "utf-8");
-    document.open();
-    document.write(fileContents);
-    document.close();
-});
-```
-
-Remember to adjust the `fs.readFileSync()` to the specific file you'd like you test. The example above is testing the `index.html` file.
-
-Finally, at the bottom of the script file where your primary scripts are written, include the following at the very bottom of the file. Make sure to include the name of all of your functions that are being tested in the `.test.js` file.
-
-```js
-/* jshint esversion: 11, jquery: true */
-/* global module */
-if (typeof module !== "undefined") module.exports = {
-    function1, function2, function3, etc
-};
-```
-
-Now that these steps have been undertaken, further tests can be written, and be expected to fail initially. Write JS code that can get the tests to pass as part of the Red-Green refactor process. Once ready, to run the tests, use this command:
-
-- `npm test`
-
-**NOTE**: To obtain a coverage report, use the following command:
-
-- `npm test --coverage`
-
-Below are the results from the tests that I've written for this application:
-
-| Test Suites | Tests | Screenshot |
-| --- | --- | --- |
-| 1 passed | 16 passed | ![screenshot](documentation/automation/jest-coverage.png) |
+No javascript was used, therefore no validation needed.
 
 #### Jest Test Issues
 

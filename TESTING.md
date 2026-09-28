@@ -3,161 +3,48 @@
 > [!NOTE]  
 > Return back to the [README.md](README.md) file.
 
-⚠️ INSTRUCTIONS ⚠️
-
-In the following sections, you need to convince the assessors that you have conducted enough manual testing to legitimately believe that the site works well. Essentially, in this part, you should go over all of your project's features, and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
-
-⚠️ --- END --- ⚠️
-
 ## Code Validation
 
-⚠️ INSTRUCTIONS ⚠️
-
-Use the space below to discuss code validation for all of your own code files (*where applicable*). You are not required to validate external libraries/frameworks.
-
-**MANDATORY**: You must provide a screenshot for each file you validate.
-
-**PRO TIP**: Where possible, always validate the live URL pages/files, not your local code using copy/paste. There could be subtle/hidden differences.
-
-⚠️ --- END --- ⚠️
-
 ### HTML
-
-⚠️ INSTRUCTIONS ⚠️
-
-1. [*recommended*] If you are using the live deployed site URLs, validate using this link: https://validator.w3.org/#validate_by_uri
-2. Otherwise, if you are copying/pasting your HTML code manually, use this link: https://validator.w3.org/#validate_by_input
-
-It's recommended to validate the live pages (all of them) using the deployed URL. This will give you a custom URL as well, which you can use below on your testing documentation. It makes it easier to return back to a page for validating it again in the future. The URL will look something like this:
-
-- https://validator.w3.org/nu/?doc=https://minhqla.github.io/sole-archive/index.html
-
-⚠️ --- END --- ⚠️
-
-🛑 IMPORTANT 🛑
-
-RE: Python/Jinja syntax in HTML
-
-Python projects that use Jinja syntax, such as `{% for loops %}`, `{% url 'home' %}`, and `{{ variable|filter }}` will not validate properly if you're copying/pasting into the HTML validator.
-
-In order to properly validate these types of files, it's recommended to [validate by uri](https://validator.w3.org/#validate_by_uri) from the deployed Heroku pages.
-
-Unfortunately, pages that require a user to be "logged-in" and authenticated (CRUD functionality) will not work using this method, due to the fact that the HTML Validator (W3C) doesn't have access to login to an account on your project. In order to properly validate HTML pages with Jinja syntax for authenticated pages, follow these steps:
-
-- Navigate to the deployed pages which require authentication.
-- Right-click anywhere on the page, and select **View Page Source** (usually `CTRL+U` or `⌘+U` on Mac).
-- This will display the entire "compiled" code, without any Jinja syntax.
-- Copy everything, and use the [validate by input](https://validator.w3.org/#validate_by_input) method.
-- Repeat this process for every page that requires a user to be logged-in/authenticated (e.g.: CRUD functionality).
-
-🛑 ---- END --- 🛑
 
 I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| templates | [collection_confirm_delete.html](https://github.com/minhqla/sole-archive/blob/main/templates/collection/collection_confirm_delete.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/collection-confirm-delete-html-validation.png) | ⚠️ Notes (if applicable) |
-| templates | [collection_detail.html](https://github.com/minhqla/sole-archive/blob/main/templates/collection/collection_detail.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/collection-detail-html-validation.png) | ⚠️ Notes (if applicable) |
-| templates | [collection_form.html](https://github.com/minhqla/sole-archive/blob/main/templates/collection/collection_form.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/collection-form-html-validation.png) | ⚠️ Notes (if applicable) |
-| templates | [collection_list.html](https://github.com/minhqla/sole-archive/blob/main/templates/collection/collection_list.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/collection-list-html-validation.png) | ⚠️ Notes (if applicable) |
-| templates | [sneaker_form.html](https://github.com/minhqla/sole-archive/blob/main/templates/collection/sneaker_form.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/sneaker-form-html-validation.png) | ⚠️ Notes (if applicable) |
-| templates | [home.html](https://github.com/minhqla/sole-archive/blob/main/templates/home.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/home-html-validation.png) | ⚠️ Notes (if applicable) |
-| templates | [login.html](https://github.com/minhqla/sole-archive/blob/main/templates/account/login.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/login-html-test.png) | ⚠️ Notes (if applicable) |
-| templates | [signup.html](https://github.com/minhqla/sole-archive/blob/main/templates/account/signup.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/signup-html-validation.png) | ⚠️ Notes (if applicable) |
+| templates | [collection_confirm_delete.html](https://github.com/minhqla/sole-archive/blob/main/templates/collection/collection_confirm_delete.html) | [W3C Markdown Validation](https://validator.w3.org/nu/#textarea) | ![screenshot](documentation/validation/collection-confirm-delete-html-validation.png) | No errors |
+| templates | [collection_detail.html](https://github.com/minhqla/sole-archive/blob/main/templates/collection/collection_detail.html) | [W3C Markdown Validation](https://validator.w3.org/nu/#textarea) | ![screenshot](documentation/validation/collection-detail-html-validation.png) | No errors |
+| templates | [collection_form.html](https://github.com/minhqla/sole-archive/blob/main/templates/collection/collection_form.html) | [W3C Markdown Validation](https://validator.w3.org/nu/#textarea) | ![screenshot](documentation/validation/collection-form-html-validation.png) | No errors |
+| templates | [collection_list.html](https://github.com/minhqla/sole-archive/blob/main/templates/collection/collection_list.html) | [W3C Markdown Validation](https://validator.w3.org/nu/#textarea) | ![screenshot](documentation/validation/collection-list-html-validation.png) | No errors |
+| templates | [sneaker_form.html](https://github.com/minhqla/sole-archive/blob/main/templates/collection/sneaker_form.html) | [W3C Markdown Validation](https://validator.w3.org/nu/#textarea) | ![screenshot](documentation/validation/sneaker-form-html-validation.png) | No errors |
+| templates | [home.html](https://github.com/minhqla/sole-archive/blob/main/templates/home.html) | [W3C Markdown Validation](https://validator.w3.org/nu/#textarea) | ![screenshot](documentation/validation/home-html-validation.png) | No errors |
+| templates | [login.html](https://github.com/minhqla/sole-archive/blob/main/templates/account/login.html) | [W3C Markdown Validation](https://validator.w3.org/nu/#textarea) | ![screenshot](documentation/validation/login-html-test.png) | No errors |
+| templates | [signup.html](https://github.com/minhqla/sole-archive/blob/main/templates/account/signup.html) | [W3C Markdown Validation](https://validator.w3.org/nu/#textarea) | ![screenshot](documentation/validation/signup-html-validation.png) | No errors |
 
 
 ### CSS
-
-⚠️ INSTRUCTIONS ⚠️
-
-1. [*recommended*] If you are using the live deployed site, use this link: https://jigsaw.w3.org/css-validator/#validate_by_uri
-2. If you are copying/pasting your CSS code, use this link: https://jigsaw.w3.org/css-validator/#validate_by_input
-
-It's recommended to validate the live site for your primary CSS file on the deployed URL. This will give you a custom URL as well, which you can use below on your testing documentation. It makes it easier to return back to a page for validating it again in the future. The URL will look something like this:
-
-- https://jigsaw.w3.org/css-validator/validator?uri=https://sole-archive-140ae91ebdab.herokuapp.com
-
-If you have additional/multiple CSS files, then individual "[validation by input](https://jigsaw.w3.org/css-validator/#validate_by_input)" is recommended for the extra CSS files.
-
-**IMPORTANT**: Third-Party tools
-
-If you're using external libraries/frameworks (e.g: Bootstrap, Materialize, Font Awesome, etc.), then sometimes the tool will attempt to also validate these, even though it's not part of your own actual code that you wrote. You are not required to validate the external libraries or frameworks!
-
-⚠️ --- END --- ⚠️
 
 I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| static | [style.css](https://github.com/minhqla/sole-archive/blob/main/static/css/style.css) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/css-validation.png) | ⚠️ Notes (if applicable) |
+| static | [style.css](https://github.com/minhqla/sole-archive/blob/main/static/css/style.css) | [W3C CSS Validation](https://jigsaw.w3.org/css-validator/validator) | ![screenshot](documentation/validation/css-validation.png) | No errors |
 
 
 ### Python
-
-⚠️ INSTRUCTIONS ⚠️
-
-The [CI Python Linter](https://pep8ci.herokuapp.com) can be used two different ways.
-
-- Copy/Paste your Python code directly into the linter.
-- As an API, using the "raw" URL appended to the linter URL.
-    - To find the "raw" URL, navigate to your file directly on the GitHub repo.
-    - On that page, GitHub provides a button on the right called "Raw" that you can click.
-    - From that new page, copy the full URL, and paste it after the CI Python Linter URL (with a `/` separator).
-
-It's recommended to validate each file using the API URL. This will give you a custom URL which you can use on your testing documentation. It makes it easier to return back to a file for validating it again in the future. Use the steps above to generate your own custom URLs for each Python file.
-
-**IMPORTANT**: `E501 line too long` errors
-
-You must strive to fix all Python lines that are too long (>80 characters). In rare cases where you cannot break the lines [*without breaking the functionality*], adding "`  # noqa`" (*NO Quality Assurance*) to the end of those lines will ignore linting validation. Do not use "`  # noqa`" all over your project just to clear down validation errors! This can still cause a project to fail, for failing to fix actual PEP8 validation errors.
-
-Sometimes variables can get too long, or excessive `if/else` conditional statements. These are acceptable instances to use the "`  # noqa`" comment.
-
-When trying to fix "line too long" errors, try to avoid using `/` to split lines. A better approach would be to use any type of opening bracket, and hit `<Enter>` just after that. Any opening bracket type will work: `(`, `[`, `{`. By using an opening bracket, Python knows where to appropriately indent the next line of code, without having to *guess* for yourself and attempt to "tab" to the correct indentation level.
-
-⚠️ --- END --- ⚠️
-
-🛑 IMPORTANT 🛑
-
-**IMPORTANT**: Django settings
-
-The Django `settings.py` file comes with 4 lines that are quite long, and will throw the `E501 line too long` error. This is default behavior, but can be fixed by adding the "`  # noqa`" comment at the end of those lines.
-
-```python
-AUTH_PASSWORD_VALIDATORS = [
-    {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",  # noqa
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",  # noqa
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",  # noqa
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",  # noqa
-    },
-]
-```
-
-**IMPORTANT**: *migration* and *pycache* files
-
-You do not have to validate files from the `migrations/` or `pycache/` folders! Ignore these `.py` files, and validate just the files that you've created or modified.
-
-🛑 --- END --- 🛑
 
 I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| collection | [admin.py](https://github.com/minhqla/sole-archive/blob/main/collection/admin.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/collection/admin.py) | ![screenshot](documentation/validation/admin-py-validation.png) | ⚠️ Notes (if applicable) |
-| collection | [forms.py](https://github.com/minhqla/sole-archive/blob/main/collection/forms.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/collection/forms.py) | ![screenshot](documentation/validation/forms-py-validation.png) | ⚠️ Notes (if applicable) |
-| collection | [models.py](https://github.com/minhqla/sole-archive/blob/main/collection/models.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/collection/models.py) | ![screenshot](documentation/validation/models-py-validation.png) | ⚠️ Notes (if applicable) |
-| collection | [tests.py](https://github.com/minhqla/sole-archive/blob/main/collection/tests.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/collection/tests.py) | ![screenshot](documentation/validation/py-collection-tests.png) | ⚠️ Notes (if applicable) |
-| collection | [urls.py](https://github.com/minhqla/sole-archive/blob/main/collection/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/collection/urls.py) | ![screenshot](documentation/validation/collection-urls-py-validation.png) | ⚠️ Notes (if applicable) |
-| collection | [views.py](https://github.com/minhqla/sole-archive/blob/main/collection/views.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/collection/views.py) | ![screenshot](documentation/validation/py-collection-views.png) | ⚠️ Notes (if applicable) |
-| config | [settings.py](https://github.com/minhqla/sole-archive/blob/main/config/settings.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/config/settings.py) | ![screenshot](documentation/validation/settings-py-validation.png) | ⚠️ Notes (if applicable) |
-| config | [urls.py](https://github.com/minhqla/sole-archive/blob/main/config/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/config/urls.py) | ![screenshot](documentation/validation/config-urls-py-validation.png) | ⚠️ Notes (if applicable) |
-|  | [manage.py](https://github.com/minhqla/sole-archive/blob/main/manage.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/manage.py) | ![screenshot](documentation/validation/manage-py-validation.png) | ⚠️ Notes (if applicable) |
+| collection | [admin.py](https://github.com/minhqla/sole-archive/blob/main/collection/admin.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/collection/admin.py) | ![screenshot](documentation/validation/admin-py-validation.png) | No errors |
+| collection | [forms.py](https://github.com/minhqla/sole-archive/blob/main/collection/forms.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/collection/forms.py) | ![screenshot](documentation/validation/forms-py-validation.png) | No errors |
+| collection | [models.py](https://github.com/minhqla/sole-archive/blob/main/collection/models.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/collection/models.py) | ![screenshot](documentation/validation/models-py-validation.png) | No errors |
+| collection | [tests.py](https://github.com/minhqla/sole-archive/blob/main/collection/tests.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/collection/tests.py) | ![screenshot](documentation/validation/collection-tests-py-validation.png) | No errors |
+| collection | [urls.py](https://github.com/minhqla/sole-archive/blob/main/collection/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/collection/urls.py) | ![screenshot](documentation/validation/collection-urls-py-validation.png) | No errors |
+| collection | [views.py](https://github.com/minhqla/sole-archive/blob/main/collection/views.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/collection/views.py) | ![screenshot](documentation/validation/collection-views-py-validation.png) | No errors |
+| config | [settings.py](https://github.com/minhqla/sole-archive/blob/main/config/settings.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/config/settings.py) | ![screenshot](documentation/validation/settings-py-validation.png) | No errors |
+| config | [urls.py](https://github.com/minhqla/sole-archive/blob/main/config/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/config/urls.py) | ![screenshot](documentation/validation/config-urls-py-validation.png) | No errors |
+|  | [manage.py](https://github.com/minhqla/sole-archive/blob/main/manage.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/manage.py) | ![screenshot](documentation/validation/manage-py-validation.png) | No errors |
 
 
 ## Responsiveness
@@ -184,45 +71,25 @@ I've tested my deployed project to check for responsiveness issues.
 
 | Page | Mobile | Tablet | Desktop | Notes |
 | --- | --- | --- | --- | --- |
-| Register | ![screenshot](documentation/responsiveness/mobile-register.png) | ![screenshot](documentation/responsiveness/tablet-register.png) | ![screenshot](documentation/test/create-account-test.png) | Works as expected |
-| Login | ![screenshot](documentation/responsiveness/mobile-login.png) | ![screenshot](documentation/responsiveness/tablet-login.png) | ![screenshot](documentation/responsiveness/desktop-login.png) | Works as expected |
-| Home | ![screenshot](documentation/responsiveness/mobile-home.png) | ![screenshot](documentation/responsiveness/tablet-home.png) | ![screenshot](documentation/responsiveness/desktop-home.png) | Works as expected |
-| Add Blog | ![screenshot](documentation/responsiveness/mobile-add-blog.png) | ![screenshot](documentation/responsiveness/tablet-add-blog.png) | ![screenshot](documentation/test/add-sneaker-test.png) | Works as expected |
-| Edit Blog | ![screenshot](documentation/responsiveness/mobile-edit-blog.png) | ![screenshot](documentation/responsiveness/tablet-edit-blog.png) | ![screenshot](documentation/responsiveness/desktop-edit-blog.png) | Works as expected |
-| Blog Post | ![screenshot](documentation/responsiveness/mobile-blog-post.png) | ![screenshot](documentation/responsiveness/tablet-blog-post.png) | ![screenshot](documentation/responsiveness/desktop-blog-post.png) | Works as expected |
-| 404 | ![screenshot](documentation/responsiveness/mobile-404.png) | ![screenshot](documentation/responsiveness/tablet-404.png) | ![screenshot](documentation/responsiveness/desktop-404.png) | Works as expected |
+| Register | ![screenshot](documentation/test/mobile-signup-test.png) | ![screenshot](documentation/responsiveness/tablet-register.png) | ![screenshot](documentation/test/chrome-signup-test.png) | Works as expected |
+| Login | ![screenshot](documentation/test/mobile-login-test.png) | ![screenshot](documentation/responsiveness/tablet-login.png) | ![screenshot](documentation/test/chrome-login-test.png) | Works as expected |
+| Home | ![screenshot](documentation/test/mobile-homepage-test.png) | ![screenshot](documentation/responsiveness/tablet-home.png) | ![screenshot](documentation/test/chrome-homepage-test.png) | Works as expected |
+| Add Sneaker | ![screenshot](documentation/test/mobile-add-sneaker-test.png) | ![screenshot](documentation/responsiveness/tablet-add-blog.png) | ![screenshot](documentation/test/chrome-add-sneaker-test.png) | Works as expected |
+| Edit Sneaker | ![screenshot](documentation/test/mobile-edit-sneaker-test.png) | ![screenshot](documentation/responsiveness/tablet-edit-blog.png) | ![screenshot](documentation/test/chrome-edit-sneaker-test.png) | Works as expected |
+| Sneaker Post | ![screenshot](documentation\test\mobile-sneaker-post-test.png) | ![screenshot](documentation/responsiveness/tablet-blog-post.png) | ![screenshot](documentation/test/chrome-sneaker-post-test.png) | Works as expected |
 
 ## Browser Compatibility
 
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to discuss testing the live/deployed site on various browsers. Consider testing at least 3 different browsers, if available on your system. You DO NOT need to use all of the browsers below, just pick any 3 (minimum).
-
-Recommended browsers to consider:
-- [Chrome](https://www.google.com/chrome)
-- [Firefox (Developer Edition)](https://www.mozilla.org/firefox/developer)
-- [Edge](https://www.microsoft.com/edge)
-- [Safari](https://support.apple.com/downloads/safari)
-- [Brave](https://brave.com/download)
-- [Opera](https://www.opera.com/download)
-
-**IMPORTANT**: You must provide screenshots of the browsers you've tested, to "prove" that you've actually tested them.
-
-Please note, there are services out there that can test multiple browser compatibilities at the same time. Some of these are paid services, but some are free. If you use these, you must provide a link to the source used for attribution, and multiple screenshots of the results.
-
-⚠️ --- END --- ⚠️
-
 I've tested my deployed project on multiple browsers to check for compatibility issues.
 
-| Page | Chrome | Firefox | Safari | Notes |
+| Page | Chrome | Firefox | OperaGX | Notes |
 | --- | --- | --- | --- | --- |
-| Register | ![screenshot](documentation/browsers/chrome-register.png) | ![screenshot](documentation/browsers/firefox-register.png) | ![screenshot](documentation/browsers/safari-register.png) | Works as expected |
-| Login | ![screenshot](documentation/browsers/chrome-login.png) | ![screenshot](documentation/browsers/firefox-login.png) | ![screenshot](documentation/browsers/safari-login.png) | Works as expected |
-| Home | ![screenshot](documentation/browsers/chrome-home.png) | ![screenshot](documentation/browsers/firefox-home.png) | ![screenshot](documentation/browsers/safari-home.png) | Works as expected |
-| Add Blog | ![screenshot](documentation/browsers/chrome-add-blog.png) | ![screenshot](documentation/browsers/firefox-add-blog.png) | ![screenshot](documentation/browsers/safari-add-blog.png) | Works as expected |
-| Edit Blog | ![screenshot](documentation/browsers/chrome-edit-blog.png) | ![screenshot](documentation/browsers/firefox-edit-blog.png) | ![screenshot](documentation/browsers/safari-edit-blog.png) | Works as expected |
-| Blog Post | ![screenshot](documentation/browsers/chrome-blog-post.png) | ![screenshot](documentation/browsers/firefox-blog-post.png) | ![screenshot](documentation/browsers/safari-blog-post.png) | Works as expected |
-| 404 | ![screenshot](documentation/browsers/chrome-404.png) | ![screenshot](documentation/browsers/firefox-404.png) | ![screenshot](documentation/browsers/safari-404.png) | Works as expected |
+| Register | ![screenshot](documentation/test/chrome-signup-test.png) | ![screenshot](documentation/test/firefox-signup-test.png) | ![screenshot](documentation/test/operagx-signup-test.png) | Works as expected |
+| Login | ![screenshot](documentation/test/chrome-login-test.png) | ![screenshot](documentation/test/firefox-login-test.png) | ![screenshot](documentation/test/operagx-login-test.png) | Works as expected |
+| Home | ![screenshot](documentation/test/chrome-homepage-test.png) | ![screenshot](documentation/test/firefox-homepage-test.png) | ![screenshot](documentation/test/operagx-homepage-test.png) | Works as expected |
+| Add Sneaker | ![screenshot](documentation/test/chrome-add-sneaker-test.png) | ![screenshot](documentation\test\firefox-add-sneaker-test.png) | ![screenshot](documentation/test/operagx-add-sneaker-test.png) | Works as expected |
+| Edit Sneaker | ![screenshot](documentation/test/chrome-edit-sneaker-test.png) | ![screenshot](documentation/test/firefox-edit-sneaker-test.png) | ![screenshot](documentation/test/operagx-edit-sneaker-test.png) | Works as expected |
+| Sneaker Post | ![screenshot](documentation/test/chrome-sneaker-post-test.png) | ![screenshot](documentation/test/firefox-sneaker-post-test.png) | ![screenshot](documentation\test\operagx-sneaker-post-test.png) | Works as expected |
 
 ## Lighthouse Audit
 
@@ -240,12 +107,12 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 | Page | Mobile | Desktop |
 | --- | --- | --- |
-| Register | ![screenshot](documentation/lighthouse/mobile-register.png) | ![screenshot](documentation/lighthouse/desktop-register-lighthouse.png) |
-| Login | ![screenshot](documentation/lighthouse/mobile-login.png) | ![screenshot](documentation/lighthouse/desktop-login-lighthouse.png) |
-| Home | ![screenshot](documentation/lighthouse/mobile-home.png) | ![screenshot](documentation/lighthouse/desktop-home-lighthouse.png) |
-| Add Blog | ![screenshot](documentation/lighthouse/mobile-add-blog.png) | ![screenshot](documentation/lighthouse/desktop-add-sneaker-lighthouse.png) |
-| Edit Blog | ![screenshot](documentation/lighthouse/mobile-edit-blog.png) | ![screenshot](documentation/lighthouse/desktop-edit-sneaker-lighthouse.png) |
-| Blog Post | ![screenshot](documentation/lighthouse/mobile-blog-post.png) | ![screenshot](documentation/lighthouse/desktop-blog-post.png) |
+| Register | ![screenshot](documentation/lighthouse/mobile-register-lighthouse.png) | ![screenshot](documentation/lighthouse/desktop-register-lighthouse.png) |
+| Login | ![screenshot](documentation/lighthouse/mobile-login-lighthouse.png) | ![screenshot](documentation/lighthouse/desktop-login-lighthouse.png) |
+| Home | ![screenshot](documentation/lighthouse/mobile-home-lighthouse.png) | ![screenshot](documentation/lighthouse/desktop-home-lighthouse.png) |
+| Add Sneaker | ![screenshot](documentation/lighthouse/mobile-add-sneaker-lighthouse.png) | ![screenshot](documentation/lighthouse/desktop-add-sneaker-lighthouse.png) |
+| Edit Sneaker | ![screenshot](documentation/lighthouse/mobile-edit-sneaker-lighthouse.png) | ![screenshot](documentation/lighthouse/desktop-edit-sneaker-lighthouse.png) |
+| Sneaker Post | ![screenshot](documentation/lighthouse/mobile-post-sneaker-lighthouse.png) | ![screenshot](documentation/lighthouse/desktop-post-sneaker-lighthouse.png) |
 
 ## Defensive Programming
 
@@ -339,7 +206,6 @@ Most of your project's **Features** should already align with the **User Stories
 | As a guest user | I would like to browse past posts | so that I can explore the blog's full content history. | ![screenshot](documentation/features/feature17.png) |
 | As a guest user | I would like to register for an account | so that I can participate in the community by leaving comments on posts. | ![screenshot](documentation/features/feature18.png) |
 | As a guest user | I would like to see the names of other commenters on posts | so that I can get a sense of community interaction before registering. | ![screenshot](documentation/features/feature19.png) |
-| As a user | I would like to see a 404 error page if I get lost | so that it's obvious that I've stumbled upon a page that doesn't exist. | ![screenshot](documentation/features/feature20.png) |
 
 ## Automated Testing
 

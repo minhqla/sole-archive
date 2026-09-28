@@ -56,15 +56,14 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| templates | [collection_confirm_delete.html](https://github.com/minhqla/sole-archive/blob/main/templates/collection/collection_confirm_delete.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-collection_confirm_delete.png) | ⚠️ Notes (if applicable) |
-| templates | [collection_detail.html](https://github.com/minhqla/sole-archive/blob/main/templates/collection/collection_detail.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-collection_detail.png) | ⚠️ Notes (if applicable) |
-| templates | [collection_form.html](https://github.com/minhqla/sole-archive/blob/main/templates/collection/collection_form.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-collection_form.png) | ⚠️ Notes (if applicable) |
-| templates | [collection_list.html](https://github.com/minhqla/sole-archive/blob/main/templates/collection/collection_list.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-collection_list.png) | ⚠️ Notes (if applicable) |
-| templates | [sneaker_form.html](https://github.com/minhqla/sole-archive/blob/main/templates/collection/sneaker_form.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-sneaker_form.png) | ⚠️ Notes (if applicable) |
-| templates | [home.html](https://github.com/minhqla/sole-archive/blob/main/templates/home.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-home.png) | ⚠️ Notes (if applicable) |
-| templates | [login.html](https://github.com/minhqla/sole-archive/blob/main/templates/account/login.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-login.png) | ⚠️ Notes (if applicable) |
-| templates | [logout.html](https://github.com/minhqla/sole-archive/blob/main/templates/account/logout.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-logout.png) | ⚠️ Notes (if applicable) |
-| templates | [signup.html](https://github.com/minhqla/sole-archive/blob/main/templates/account/signup.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-signup.png) | ⚠️ Notes (if applicable) |
+| templates | [collection_confirm_delete.html](https://github.com/minhqla/sole-archive/blob/main/templates/collection/collection_confirm_delete.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/collection-confirm-delete-html-validation.png) | ⚠️ Notes (if applicable) |
+| templates | [collection_detail.html](https://github.com/minhqla/sole-archive/blob/main/templates/collection/collection_detail.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/collection-detail-html-validation.png) | ⚠️ Notes (if applicable) |
+| templates | [collection_form.html](https://github.com/minhqla/sole-archive/blob/main/templates/collection/collection_form.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/collection-form-html-validation.png) | ⚠️ Notes (if applicable) |
+| templates | [collection_list.html](https://github.com/minhqla/sole-archive/blob/main/templates/collection/collection_list.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/collection-list-html-validation.png) | ⚠️ Notes (if applicable) |
+| templates | [sneaker_form.html](https://github.com/minhqla/sole-archive/blob/main/templates/collection/sneaker_form.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/sneaker-form-html-validation.png) | ⚠️ Notes (if applicable) |
+| templates | [home.html](https://github.com/minhqla/sole-archive/blob/main/templates/home.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/home-html-validation.png) | ⚠️ Notes (if applicable) |
+| templates | [login.html](https://github.com/minhqla/sole-archive/blob/main/templates/account/login.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/login-html-test.png) | ⚠️ Notes (if applicable) |
+| templates | [signup.html](https://github.com/minhqla/sole-archive/blob/main/templates/account/signup.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/signup-html-validation.png) | ⚠️ Notes (if applicable) |
 
 
 ### CSS
@@ -90,33 +89,7 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| static | [style.css](https://github.com/minhqla/sole-archive/blob/main/static/css/style.css) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/css-static-style.png) | ⚠️ Notes (if applicable) |
-
-
-### JavaScript
-
-⚠️ INSTRUCTIONS ⚠️
-
-If using modern JavaScript (ES6) methods, then make sure to include the following line at the very top of every single JavaScript file in your project (this should remain in your files for submission as well):
-
-`/* jshint esversion: 11 */`
-
-If you are also including jQuery (`$`), then the updated format will be:
-
-`/* jshint esversion: 11, jquery: true */`
-
-This allows the JShint validator to recognize modern ES6 methods, such as: `let`, `const`, `template literals`, `arrow functions (=>)`, etc.
-
-**IMPORTANT**: External resources
-
-Sometimes we'll write JavaScript that imports variables from other files, such as "an array of questions" from `questions.js`, which are used within the main `script.js` file elsewhere. If that's the case, the JShint validation tool doesn't know how to recognize "unused variables" that would normally be imported locally when running your own project. These warnings are acceptable, so showcase on your screenshot(s).
-
-The same thing applies when using external libraries such as Stripe, Leaflet, Bootstrap, Materialize, etc. To instantiate these components, we need to use their respective declarator. Again, the JShint validation tool would flag these as "undefined/unused variables". These warnings are acceptable, so showcase on your screenshot(s).
-
-⚠️ --- END --- ⚠️
-
-I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
-
+| static | [style.css](https://github.com/minhqla/sole-archive/blob/main/static/css/style.css) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/css-validation.png) | ⚠️ Notes (if applicable) |
 
 
 ### Python
@@ -176,15 +149,15 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| collection | [admin.py](https://github.com/minhqla/sole-archive/blob/main/collection/admin.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/collection/admin.py) | ![screenshot](documentation/validation/py-collection-admin.png) | ⚠️ Notes (if applicable) |
-| collection | [forms.py](https://github.com/minhqla/sole-archive/blob/main/collection/forms.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/collection/forms.py) | ![screenshot](documentation/validation/py-collection-forms.png) | ⚠️ Notes (if applicable) |
-| collection | [models.py](https://github.com/minhqla/sole-archive/blob/main/collection/models.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/collection/models.py) | ![screenshot](documentation/validation/py-collection-models.png) | ⚠️ Notes (if applicable) |
+| collection | [admin.py](https://github.com/minhqla/sole-archive/blob/main/collection/admin.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/collection/admin.py) | ![screenshot](documentation/validation/admin-py-validation.png) | ⚠️ Notes (if applicable) |
+| collection | [forms.py](https://github.com/minhqla/sole-archive/blob/main/collection/forms.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/collection/forms.py) | ![screenshot](documentation/validation/forms-py-validation.png) | ⚠️ Notes (if applicable) |
+| collection | [models.py](https://github.com/minhqla/sole-archive/blob/main/collection/models.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/collection/models.py) | ![screenshot](documentation/validation/models-py-validation.png) | ⚠️ Notes (if applicable) |
 | collection | [tests.py](https://github.com/minhqla/sole-archive/blob/main/collection/tests.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/collection/tests.py) | ![screenshot](documentation/validation/py-collection-tests.png) | ⚠️ Notes (if applicable) |
-| collection | [urls.py](https://github.com/minhqla/sole-archive/blob/main/collection/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/collection/urls.py) | ![screenshot](documentation/validation/py-collection-urls.png) | ⚠️ Notes (if applicable) |
+| collection | [urls.py](https://github.com/minhqla/sole-archive/blob/main/collection/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/collection/urls.py) | ![screenshot](documentation/validation/collection-urls-py-validation.png) | ⚠️ Notes (if applicable) |
 | collection | [views.py](https://github.com/minhqla/sole-archive/blob/main/collection/views.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/collection/views.py) | ![screenshot](documentation/validation/py-collection-views.png) | ⚠️ Notes (if applicable) |
-| config | [settings.py](https://github.com/minhqla/sole-archive/blob/main/config/settings.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/config/settings.py) | ![screenshot](documentation/validation/py-config-settings.png) | ⚠️ Notes (if applicable) |
-| config | [urls.py](https://github.com/minhqla/sole-archive/blob/main/config/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/config/urls.py) | ![screenshot](documentation/validation/py-config-urls.png) | ⚠️ Notes (if applicable) |
-|  | [manage.py](https://github.com/minhqla/sole-archive/blob/main/manage.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/manage.py) | ![screenshot](documentation/validation/py--manage.png) | ⚠️ Notes (if applicable) |
+| config | [settings.py](https://github.com/minhqla/sole-archive/blob/main/config/settings.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/config/settings.py) | ![screenshot](documentation/validation/settings-py-validation.png) | ⚠️ Notes (if applicable) |
+| config | [urls.py](https://github.com/minhqla/sole-archive/blob/main/config/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/config/urls.py) | ![screenshot](documentation/validation/config-urls-py-validation.png) | ⚠️ Notes (if applicable) |
+|  | [manage.py](https://github.com/minhqla/sole-archive/blob/main/manage.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/minhqla/sole-archive/main/manage.py) | ![screenshot](documentation/validation/manage-py-validation.png) | ⚠️ Notes (if applicable) |
 
 
 ## Responsiveness
@@ -211,10 +184,10 @@ I've tested my deployed project to check for responsiveness issues.
 
 | Page | Mobile | Tablet | Desktop | Notes |
 | --- | --- | --- | --- | --- |
-| Register | ![screenshot](documentation/responsiveness/mobile-register.png) | ![screenshot](documentation/responsiveness/tablet-register.png) | ![screenshot](documentation/responsiveness/desktop-register.png) | Works as expected |
+| Register | ![screenshot](documentation/responsiveness/mobile-register.png) | ![screenshot](documentation/responsiveness/tablet-register.png) | ![screenshot](documentation/test/create-account-test.png) | Works as expected |
 | Login | ![screenshot](documentation/responsiveness/mobile-login.png) | ![screenshot](documentation/responsiveness/tablet-login.png) | ![screenshot](documentation/responsiveness/desktop-login.png) | Works as expected |
 | Home | ![screenshot](documentation/responsiveness/mobile-home.png) | ![screenshot](documentation/responsiveness/tablet-home.png) | ![screenshot](documentation/responsiveness/desktop-home.png) | Works as expected |
-| Add Blog | ![screenshot](documentation/responsiveness/mobile-add-blog.png) | ![screenshot](documentation/responsiveness/tablet-add-blog.png) | ![screenshot](documentation/responsiveness/desktop-add-blog.png) | Works as expected |
+| Add Blog | ![screenshot](documentation/responsiveness/mobile-add-blog.png) | ![screenshot](documentation/responsiveness/tablet-add-blog.png) | ![screenshot](documentation/test/add-sneaker-test.png) | Works as expected |
 | Edit Blog | ![screenshot](documentation/responsiveness/mobile-edit-blog.png) | ![screenshot](documentation/responsiveness/tablet-edit-blog.png) | ![screenshot](documentation/responsiveness/desktop-edit-blog.png) | Works as expected |
 | Blog Post | ![screenshot](documentation/responsiveness/mobile-blog-post.png) | ![screenshot](documentation/responsiveness/tablet-blog-post.png) | ![screenshot](documentation/responsiveness/desktop-blog-post.png) | Works as expected |
 | 404 | ![screenshot](documentation/responsiveness/mobile-404.png) | ![screenshot](documentation/responsiveness/tablet-404.png) | ![screenshot](documentation/responsiveness/desktop-404.png) | Works as expected |
